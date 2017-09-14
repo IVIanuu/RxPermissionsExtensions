@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RxPermissionsExtensions.iml" filepath="$PROJECT_DIR$/RxPermissionsExtensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxpermissionsextensions/rxpermissionsextensions.iml" filepath="$PROJECT_DIR$/rxpermissionsextensions/rxpermissionsextensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/app.iml" filepath="$PROJECT_DIR$/sample/app.iml" />
+    </modules>
+  </component>
+</project>
