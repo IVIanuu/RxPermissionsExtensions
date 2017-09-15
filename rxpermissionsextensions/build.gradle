@@ -18,29 +18,27 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
     }
 }
 
 dependencies {
     // Android Support
-    compile 'com.android.support:support-fragment:26.1.0'
+    api rootProject.ext.supportFragment
 
     // Kotlin
-    api"org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.4-3"
+    api rootProject.ext.kotlinStdlib
 
     // RxJava
-    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+    compile rootProject.ext.rxJava
 
     // RxPermissions
-    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    compile rootProject.ext.rxPermissions
 }
 
 // build a jar with source files
