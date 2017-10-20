@@ -19,12 +19,12 @@ package com.ivianuu.rxpermissionsextensions
 import java.util.*
 import kotlin.reflect.KProperty
 
-internal class LazyWithReceiver<in This, out Return>(private val initializer:This.()->Return) {
-    private val values = WeakHashMap<This, Return>()
+internal class LazyWithReceiver<in This, out Value>(private val initializer: This.() -> Value) {
+    private val values = WeakHashMap<This, Value>()
 
     @Suppress("UNCHECKED_CAST")
-    operator fun getValue(thisRef:Any,property: KProperty<*>):Return = synchronized(values) {
-        thisRef as This
-        return values.getOrPut(thisRef) { thisRef.initializer() }
+    operator fun getValue(thiz: Any, property: KProperty<*>):Value {
+        thiz as This
+        return values.getOrPut(thiz) { thiz.initializer() }
     }
 }
